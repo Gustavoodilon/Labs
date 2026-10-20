@@ -1,0 +1,112 @@
+{
+  "operation": "analyze",
+  "input": "images/output/m1_gray_scene_256_adaptive_mask.png",
+  "image": {
+    "width": 256,
+    "height": 256
+  },
+  "foreground_value": 255,
+  "background_value": 0,
+  "connectivity": 8,
+  "min_area": 20,
+  "area_filter_rule": "componente mantido se area >= 20 pixels",
+  "sequence_source": "argumento",
+  "sequence": [
+    {
+      "op": "close",
+      "shape": "ellipse",
+      "size": 7,
+      "iterations": 1
+    },
+    {
+      "op": "open",
+      "shape": "ellipse",
+      "size": 5,
+      "iterations": 1
+    }
+  ],
+  "initial": {
+    "foreground_pixels": 2757,
+    "connectivity_4": {
+      "components_raw": 2,
+      "components_kept": 2,
+      "area_raw_sum": 2757,
+      "area_kept_sum": 2757,
+      "touching_border": 1
+    },
+    "connectivity_8": {
+      "components_raw": 2,
+      "components_kept": 2,
+      "area_raw_sum": 2757,
+      "area_kept_sum": 2757,
+      "touching_border": 1
+    },
+    "selected": {
+      "components_raw": 2,
+      "components_kept": 2,
+      "area_raw_sum": 2757,
+      "area_kept_sum": 2757,
+      "touching_border": 1
+    }
+  },
+  "final": {
+    "foreground_pixels": 2136,
+    "connectivity_4": {
+      "components_raw": 2,
+      "components_kept": 2,
+      "area_raw_sum": 2136,
+      "area_kept_sum": 2136,
+      "touching_border": 0
+    },
+    "connectivity_8": {
+      "components_raw": 2,
+      "components_kept": 2,
+      "area_raw_sum": 2136,
+      "area_kept_sum": 2136,
+      "touching_border": 0
+    },
+    "selected": {
+      "components_raw": 2,
+      "components_kept": 2,
+      "area_raw_sum": 2136,
+      "area_kept_sum": 2136,
+      "touching_border": 0
+    }
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "op": "close",
+      "shape": "ellipse",
+      "size": 7,
+      "iterations": 1,
+      "file": "results/m1_gray_scene_256_ordem_inversa_stage1_close.png",
+      "foreground_pixels": 2759,
+      "components_raw": 2,
+      "components_kept": 2
+    },
+    {
+      "stage": 2,
+      "op": "open",
+      "shape": "ellipse",
+      "size": 5,
+      "iterations": 1,
+      "file": "results/m1_gray_scene_256_ordem_inversa_stage2_open.png",
+      "foreground_pixels": 2136,
+      "components_raw": 2,
+      "components_kept": 2
+    }
+  ],
+  "checks": {
+    "area_sum_equals_foreground_initial": true,
+    "area_sum_equals_foreground_final": true
+  },
+  "files": {
+    "initial_mask": "results/m1_gray_scene_256_ordem_inversa_initial_mask.png",
+    "initial_csv": "results/m1_gray_scene_256_ordem_inversa_initial.csv",
+    "final_mask": "results/m1_gray_scene_256_ordem_inversa_final_mask.png",
+    "final_csv": "results/m1_gray_scene_256_ordem_inversa_final.csv",
+    "labels_initial": "results/m1_gray_scene_256_ordem_inversa_labels_initial.png",
+    "labels": "results/m1_gray_scene_256_ordem_inversa_labels.png"
+  }
+}

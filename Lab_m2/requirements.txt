@@ -1,0 +1,14 @@
+# OpenCV para Python sem componentes de interface grafica.
+# A biblioteca e usada como infraestrutura de leitura, escrita e acesso
+# aos dados da imagem. As operacoes avaliadas continuam sendo implementadas
+# manualmente pelo estudante.
+#
+# No Windows, use uma instalacao oficial do CPython para Windows. Nao use o
+# Python distribuido pelo MSYS2/UCRT64 para este projeto, pois os wheels
+# oficiais do opencv-python-headless sao publicados para a plataforma Windows
+# CPython (win_amd64), e nao para o ABI MinGW/UCRT do Python do MSYS2.
+opencv-python-headless==5.0.0.93
+
+# Framework utilizado pelos testes publicos do template e pelos testes
+# adicionais que o estudante decidir escrever.
+pytest==9.0.2

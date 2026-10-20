@@ -1,0 +1,27 @@
+{
+  "input": "images/input/m1_gray_scene_256.png",
+  "output": "images/output/m1_gray_scene_256_fixed_mask.png",
+  "width": 256,
+  "height": 256,
+  "parameters": {
+    "method": "fixed",
+    "invert": false,
+    "blur": 0,
+    "threshold": 200
+  },
+  "info": {},
+  "foreground_pixels": 9353,
+  "total_pixels": 65536,
+  "foreground_ratio": 0.1427154541015625,
+  "checks": {
+    "single_channel": true,
+    "same_size_as_input": true,
+    "dtype_uint8": true,
+    "values_only_0_255": true,
+    "values_present": [
+      0,
+      255
+    ],
+    "ok": true
+  }
+}

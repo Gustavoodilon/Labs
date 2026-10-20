@@ -1,0 +1,24 @@
+{
+  "m1_color_2x2.png": {
+    "mode": "RGB",
+    "width": 2,
+    "height": 2,
+    "pixels_rgb": [
+      [[255, 0, 0], [0, 255, 0]],
+      [[0, 0, 255], [255, 255, 255]]
+    ],
+    "note": "Ao carregar em modo colorido no OpenCV, o acesso aos canais usa a ordem B,G,R."
+  },
+  "m1_gray_5x5.png": {
+    "mode": "L",
+    "width": 5,
+    "height": 5,
+    "pixels": [
+      [10, 20, 30, 40, 50],
+      [60, 70, 80, 90, 100],
+      [110, 120, 130, 140, 150],
+      [160, 170, 180, 190, 200],
+      [210, 220, 230, 240, 250]
+    ]
+  }
+}

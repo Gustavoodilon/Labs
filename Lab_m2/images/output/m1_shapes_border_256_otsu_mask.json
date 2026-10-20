@@ -1,0 +1,28 @@
+{
+  "input": "images/input/m1_shapes_border_256.png",
+  "output": "images/output/m1_shapes_border_256_otsu_mask.png",
+  "width": 256,
+  "height": 256,
+  "parameters": {
+    "method": "otsu",
+    "invert": false,
+    "blur": 0
+  },
+  "info": {
+    "otsu_threshold": 85.0
+  },
+  "foreground_pixels": 19259,
+  "total_pixels": 65536,
+  "foreground_ratio": 0.2938690185546875,
+  "checks": {
+    "single_channel": true,
+    "same_size_as_input": true,
+    "dtype_uint8": true,
+    "values_only_0_255": true,
+    "values_present": [
+      0,
+      255
+    ],
+    "ok": true
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "operation": "analyze",
+  "input": "images/output/m1_shapes_border_256_fixed_mask.png",
+  "image": {
+    "width": 256,
+    "height": 256
+  },
+  "foreground_value": 255,
+  "background_value": 0,
+  "connectivity": 8,
+  "min_area": 20,
+  "area_filter_rule": "componente mantido se area >= 20 pixels",
+  "sequence_source": "argumento",
+  "sequence": [
+    {
+      "op": "close",
+      "shape": "ellipse",
+      "size": 7,
+      "iterations": 1
+    },
+    {
+      "op": "open",
+      "shape": "ellipse",
+      "size": 5,
+      "iterations": 1
+    }
+  ],
+  "initial": {
+    "foreground_pixels": 21835,
+    "connectivity_4": {
+      "components_raw": 3,
+      "components_kept": 3,
+      "area_raw_sum": 21835,
+      "area_kept_sum": 21835,
+      "touching_border": 3
+    },
+    "connectivity_8": {
+      "components_raw": 3,
+      "components_kept": 3,
+      "area_raw_sum": 21835,
+      "area_kept_sum": 21835,
+      "touching_border": 3
+    },
+    "selected": {
+      "components_raw": 3,
+      "components_kept": 3,
+      "area_raw_sum": 21835,
+      "area_kept_sum": 21835,
+      "touching_border": 3
+    }
+  },
+  "final": {
+    "foreground_pixels": 21323,
+    "connectivity_4": {
+      "components_raw": 5,
+      "components_kept": 4,
+      "area_raw_sum": 21323,
+      "area_kept_sum": 21306,
+      "touching_border": 4
+    },
+    "connectivity_8": {
+      "components_raw": 5,
+      "components_kept": 4,
+      "area_raw_sum": 21323,
+      "area_kept_sum": 21306,
+      "touching_border": 4
+    },
+    "selected": {
+      "components_raw": 5,
+      "components_kept": 4,
+      "area_raw_sum": 21323,
+      "area_kept_sum": 21306,
+      "touching_border": 4
+    }
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "op": "close",
+      "shape": "ellipse",
+      "size": 7,
+      "iterations": 1,
+      "file": "results/m1_shapes_border_256_ordem_inversa_stage1_close.png",
+      "foreground_pixels": 21856,
+      "components_raw": 3,
+      "components_kept": 3
+    },
+    {
+      "stage": 2,
+      "op": "open",
+      "shape": "ellipse",
+      "size": 5,
+      "iterations": 1,
+      "file": "results/m1_shapes_border_256_ordem_inversa_stage2_open.png",
+      "foreground_pixels": 21323,
+      "components_raw": 5,
+      "components_kept": 4
+    }
+  ],
+  "checks": {
+    "area_sum_equals_foreground_initial": true,
+    "area_sum_equals_foreground_final": true
+  },
+  "files": {
+    "initial_mask": "results/m1_shapes_border_256_ordem_inversa_initial_mask.png",
+    "initial_csv": "results/m1_shapes_border_256_ordem_inversa_initial.csv",
+    "final_mask": "results/m1_shapes_border_256_ordem_inversa_final_mask.png",
+    "final_csv": "results/m1_shapes_border_256_ordem_inversa_final.csv",
+    "labels_initial": "results/m1_shapes_border_256_ordem_inversa_labels_initial.png",
+    "labels": "results/m1_shapes_border_256_ordem_inversa_labels.png"
+  }
+}

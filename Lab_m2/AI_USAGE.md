@@ -1,0 +1,3 @@
+# Declaração de uso de IA generativa
+
+Declaro que, durante a realização deste trabalho, utilizei ferramentas de inteligência artificial exclusivamente como suporte, principalmente para tirar dúvidas pontuais sobre conceitos e para entender melhor alguns pontos que não estavam claros para mim. Essas ferramentas funcionaram como um apoio ao meu processo de aprendizado, de maneira semelhante a uma consulta a materiais didáticos ou a um colega de turma. O desenvolvimento do trabalho, as decisões tomadas, a implementação e a redação final foram feitos por mim, e me responsabilizo pelo conteúdo entregue.

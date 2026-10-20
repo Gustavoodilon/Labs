@@ -1,0 +1,112 @@
+{
+  "operation": "analyze",
+  "input": "images/output/m1_checkerboard_256_fixed_mask.png",
+  "image": {
+    "width": 256,
+    "height": 256
+  },
+  "foreground_value": 255,
+  "background_value": 0,
+  "connectivity": 8,
+  "min_area": 20,
+  "area_filter_rule": "componente mantido se area >= 20 pixels",
+  "sequence_source": "argumento",
+  "sequence": [
+    {
+      "op": "open",
+      "shape": "ellipse",
+      "size": 5,
+      "iterations": 1
+    },
+    {
+      "op": "close",
+      "shape": "ellipse",
+      "size": 7,
+      "iterations": 1
+    }
+  ],
+  "initial": {
+    "foreground_pixels": 32768,
+    "connectivity_4": {
+      "components_raw": 128,
+      "components_kept": 128,
+      "area_raw_sum": 32768,
+      "area_kept_sum": 32768,
+      "touching_border": 30
+    },
+    "connectivity_8": {
+      "components_raw": 1,
+      "components_kept": 1,
+      "area_raw_sum": 32768,
+      "area_kept_sum": 32768,
+      "touching_border": 1
+    },
+    "selected": {
+      "components_raw": 1,
+      "components_kept": 1,
+      "area_raw_sum": 32768,
+      "area_kept_sum": 32768,
+      "touching_border": 1
+    }
+  },
+  "final": {
+    "foreground_pixels": 34568,
+    "connectivity_4": {
+      "components_raw": 1,
+      "components_kept": 1,
+      "area_raw_sum": 34568,
+      "area_kept_sum": 34568,
+      "touching_border": 1
+    },
+    "connectivity_8": {
+      "components_raw": 1,
+      "components_kept": 1,
+      "area_raw_sum": 34568,
+      "area_kept_sum": 34568,
+      "touching_border": 1
+    },
+    "selected": {
+      "components_raw": 1,
+      "components_kept": 1,
+      "area_raw_sum": 34568,
+      "area_kept_sum": 34568,
+      "touching_border": 1
+    }
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "op": "open",
+      "shape": "ellipse",
+      "size": 5,
+      "iterations": 1,
+      "file": "results/m1_checkerboard_256_stage1_open.png",
+      "foreground_pixels": 31868,
+      "components_raw": 128,
+      "components_kept": 128
+    },
+    {
+      "stage": 2,
+      "op": "close",
+      "shape": "ellipse",
+      "size": 7,
+      "iterations": 1,
+      "file": "results/m1_checkerboard_256_stage2_close.png",
+      "foreground_pixels": 34568,
+      "components_raw": 1,
+      "components_kept": 1
+    }
+  ],
+  "checks": {
+    "area_sum_equals_foreground_initial": true,
+    "area_sum_equals_foreground_final": true
+  },
+  "files": {
+    "initial_mask": "results/m1_checkerboard_256_initial_mask.png",
+    "initial_csv": "results/m1_checkerboard_256_initial.csv",
+    "final_mask": "results/m1_checkerboard_256_final_mask.png",
+    "final_csv": "results/m1_checkerboard_256_final.csv",
+    "labels_initial": "results/m1_checkerboard_256_labels_initial.png",
+    "labels": "results/m1_checkerboard_256_labels.png"
+  }
+}

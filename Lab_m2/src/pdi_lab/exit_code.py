@@ -1,0 +1,9 @@
+"""Códigos de saída padronizados entre C++, Java e Python."""
+
+SUCCESS = 0
+GENERAL_ERROR = 1
+INVALID_ARGUMENTS = 2
+READ_ERROR = 3
+WRITE_ERROR = 4
+INVALID_PARAMETER = 5
+UNKNOWN_OPERATION = 6
